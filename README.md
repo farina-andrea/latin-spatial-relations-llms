@@ -30,3 +30,21 @@ Given a sentence and detected spatial relation, identify the exact token express
 - `openai` Python client library (or the relevant OpenAI client you use)
 - `pandas`
 - `re` (regular expressions)
+
+---
+## Usage
+
+### Load annotated data
+Load your annotated Latin dataset CSV and filter relevant sentences containing preverbed motion verbs.
+
+### Generate Prompts
+Use the provided prompt generation functions (`make_prompts`, `make_prompts_3_shot`) to create task-specific prompts for GPT-4.
+
+### Run Inference
+Loop through the filtered data rows and query GPT-4 with the constructed prompts to obtain:
+
+- All forms of the target verb in the sentence.
+- Boolean classification for source, goal, and path spatial expressions.
+
+### Parse and Store Outputs
+Extract the predicted verb forms and spatial relation flags from GPT responses, storing results in the DataFrame for further analysis.
