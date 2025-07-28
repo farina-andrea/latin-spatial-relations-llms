@@ -4,10 +4,7 @@ This repository contains code for using OpenAI's **GPT-4** model to perform comp
 
 ### Associated Paper:
 
-Mapping Meaning in Latin with Large Language Models: A Multi-Task Evaluation of Preverbed Motion Verbs and Spatial Relation Detection in LLMs.
-Authors: Andrea Farina<sup>a</sup><sup>1</sup>, Andrea Ballatore<sup>1</sup>, Barbara McGillivray<sup>1</sup>
-
-<sup>a</sup>Corresponding author: andrea.farina[at]kcl.ac.uk; <sup>1</sup>King's College London, London, United Kingdom
+Farina, A., Ballatore, A., & McGillivray, B. (2025). Mapping Meaning in Latin with Large Language Models: A Multi-Task Evaluation of Preverbed Motion Verbs and Spatial Relation Detection in LLMs.*CLiC-it 2025: Eleventh Italian Conference on Computational Linguistics, September 24 — 26, 2025, Cagliari, Italy*.
 
 > **Note:**  
 > While this code is designed for use with OpenAI's GPT-4 API, the logic and structure are basically the same when working with other large language models like **LLaMA** and **Mistral**.  
