@@ -4,7 +4,7 @@ This repository contains code for using OpenAI's **GPT-4** model to perform comp
 
 ### Associated Paper:
 
-Farina, A., Ballatore, A., & McGillivray, B. (2025). Mapping Meaning in Latin with Large Language Models: A Multi-Task Evaluation of Preverbed Motion Verbs and Spatial Relation Detection in LLMs.*CLiC-it 2025: Eleventh Italian Conference on Computational Linguistics, September 24 — 26, 2025, Cagliari, Italy*.
+Farina, A., Ballatore, A., & McGillivray, B. (2025). Mapping Meaning in Latin with Large Language Models: A Multi-Task Evaluation of Preverbed Motion Verbs and Spatial Relation Detection in LLMs. *CLiC-it 2025: Eleventh Italian Conference on Computational Linguistics, September 24 — 26, 2025, Cagliari, Italy*.
 
 ---
 
