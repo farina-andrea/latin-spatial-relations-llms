@@ -2,6 +2,13 @@
 
 This repository contains code for using OpenAI's **GPT-4** model to perform complex Latin linguistic annotation tasks involving **verb form identification** and **spatial relation detection** in sentences.
 
+### Associated Paper:
+
+Mapping Meaning in Latin with Large Language Models: A Multi-Task Evaluation of Preverbed Motion Verbs and Spatial Relation Detection in LLMs.
+Authors: Andrea Farina<sup>a</sup><sup>1</sup>, Andrea Ballatore<sup>1</sup>, Barbara McGillivray<sup>1</sup>
+
+<sup>a</sup>Corresponding author: andrea.farina[at]kcl.ac.uk; <sup>1</sup>King's College London, London, United Kingdom
+
 > **Note:**  
 > While this code is designed for use with OpenAI's GPT-4 API, the logic and structure are basically the same when working with other large language models like **LLaMA** and **Mistral**.  
 > For those models, **Google Colab** environments were used, so users should follow the official **Hugging Face** guidelines for model installation and setup.
@@ -34,14 +41,23 @@ Given a sentence and detected spatial relation, identify the exact token express
 ---
 ## Usage
 
+Use the notebook: `llm_spatial_relation_tasks.ipynb`
+This notebook performs all three tasks (verb identification, spatial relation classification, and disambiguation) using OpenAI's GPT-4.
+
 ### Load annotated data
-Load your annotated dataset in CSV.
+Place your CSV file in the project directory and load it using pandas.
 
 ### Generate Prompts
-Use the provided prompt generation functions (e.g., `make_prompts`, `make_prompts_3_shot`) to create task-specific prompts for GPT-4.
+Use the provided prompt generation functions (e.g., `make_prompts`, `make_prompts_3_shot`) to construct prompts in zero-shot, one-shot, or few-shot configurations.
 
 ### Run Inference
-Loop through the filtered data rows and query GPT-4 with the constructed prompts to obtain:
+Send prompts to GPT-4 using the OpenAI API. The model returns:
+- All identified verb forms in the sentence
+- Boolean flags for presence of Source, Goal, and Path
 
 ### Parse and Store Outputs
-Extract the predicted verb forms and spatial relation flags from GPT responses, storing results in the DataFrame for further analysis.
+Model predictions are stored in the DataFrame under new columns:
+- `predicted` (full response from GPT)
+- `predicted_source`
+- `predicted_goal`
+- `predicted_path`
